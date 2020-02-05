@@ -10,6 +10,10 @@ def test_setting_initial_amount():
     wallet = Wallet(100)
     assert wallet.balance == 100
 
+def test_setting_negative_amount():
+    wallet = Wallet(-100)
+    assert wallet.balance == -100
+
 def test_wallet_add_cash():
     wallet = Wallet(10)
     wallet.add_cash(90)
